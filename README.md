@@ -1,45 +1,50 @@
-
-# 🗣️ Dialogue Summarization with Flan-T5 & QLoRA
+# Dialogue Summarization with Flan-T5 & QLoRA
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-orange?style=for-the-badge&logo=huggingface&logoColor=white)
 ![Gradio](https://img.shields.io/badge/Gradio-App-red?style=for-the-badge&logo=gradio&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-## 📌 Project Overview
-This project focuses on **Abstractive Dialogue Summarization** using a parameter-efficient fine-tuning (PEFT) approach. We fine-tuned the `google/flan-t5-base` model on the **SAMSum corpus** using **QLoRA** (Quantized Low-Rank Adaptation). This approach allows for high-performance summarization while maintaining low computational costs.
+A generic abstractive summarization project that fine-tunes the `google/flan-t5-base` model on the SAMSum corpus using Parameter-Efficient Fine-Tuning (PEFT) and Quantized Low-Rank Adaptation (QLoRA).
 
----
+## 🏗️ Project Structure
 
-## 📂 Repository Structure
-The project follows a modular architecture for reproducibility and clean code organization:
-
-```text
+```bash
 Dialogue-Summarization-T5/
-├── src/
+├── src/                      # Source code for training and inference
 │   ├── app.py                # Interactive Gradio web application (Demo)
 │   ├── config.py             # Global hyperparameters and file paths
 │   ├── model_loader.py       # 4-bit Quantization (NF4) & LoRA configuration
 │   └── train.py              # Main training script (Hugging Face Trainer)
-├── Final_Project_Fixed.ipynb # Full Project Notebook (Analysis, Training, Eval)
-├── requirements.txt          # List of project dependencies
+├── Final_Project_Fixed.ipynb # Comprehensive Project Notebook (Analysis, Training, Eval)
+├── requirements.txt          # Python dependencies
 └── README.md                 # Project Documentation
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project Documentation
+```  <-- YOU MUST HAVE THESE 3 TICKS HERE TO CLOSE THE BOX!
+
+## Here is the "Quick Start" section to the End (Copy and Paste this BELOW those 3 ticks):
+
+```markdown
+## 🚀 Quick Start
+
+### 1. Initial Setup
+
+First, clone the repository and enter the directory:
+
+```bash
+git clone [https://github.com/abdulmajiid1/Dialogue-Summarization-T5-.git](https://github.com/abdulmajiid1/Dialogue-Summarization-T5-.git)
+cd Dialogue-Summarization-T5-
 
 
-## 🚀 Technical Implementation
-Model Architecture
-Base Model: google/flan-t5-base (248M Parameters)
 
-Task: Abstractive Summarization (Seq2Seq)
 
-Optimization & Fine-Tuning
-Quantization: BitsAndBytes 4-bit Normal Float (NF4) for memory efficiency.
 
-PEFT (LoRA): Rank=16, Alpha=32, Dropout=0.05.
 
-Target Modules: Fine-tuned q (Query) and v (Value) attention layers.
 
-##Dataset
-Source: SAMSum Corpus (14k dialogues).
 
-Preprocessing: Tokenized with T5Tokenizer and dynamic padding.
+
+
+
+
+
