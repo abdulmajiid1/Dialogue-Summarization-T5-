@@ -72,7 +72,7 @@ python src/app.py
 
 ## 📝 License
 
-This project is open-source and available under the [MIT License](https://www.google.com/search?q=LICENSE).
+This project is for educational purposes. If you use external datasets, please check their original license terms
 
-This video explains the basics of GitHub Markdown so you can see exactly how to keep text outside of code blocks for a professional look.
+
 
