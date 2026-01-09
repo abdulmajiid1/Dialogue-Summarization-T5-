@@ -1,3 +1,4 @@
+```markdown
 # Dialogue Summarization with Flan-T5 & QLoRA
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&logoColor=white)
@@ -19,13 +20,9 @@ Dialogue-Summarization-T5/
 ├── Final_Project_Fixed.ipynb # Comprehensive Project Notebook (Analysis, Training, Eval)
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project Documentation
-├── requirements.txt          # Python dependencies
-└── README.md                 # Project Documentation
-```  <-- YOU MUST HAVE THESE 3 TICKS HERE TO CLOSE THE BOX!
 
-## Here is the "Quick Start" section to the End (Copy and Paste this BELOW those 3 ticks):
+```
 
-```markdown
 ## 🚀 Quick Start
 
 ### 1. Initial Setup
@@ -36,7 +33,67 @@ First, clone the repository and enter the directory:
 git clone [https://github.com/abdulmajiid1/Dialogue-Summarization-T5-.git](https://github.com/abdulmajiid1/Dialogue-Summarization-T5-.git)
 cd Dialogue-Summarization-T5-
 
+```
 
+Next, install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+
+```
+
+### 2. Training (Optional)
+
+If you want to retrain the model or reproduce the fine-tuning results, run the training script:
+
+```bash
+python src/train.py
+
+```
+
+> **Note:** Training uses the SAMSum dataset and requires a GPU with support for BitsAndBytes quantization.
+
+### 3. Interactive Demo
+
+To launch the Gradio web interface for real-time summarization:
+
+```bash
+python src/app.py
+
+```
+
+Access the interface at:
+
+* Local URL: [http://localhost:7860](https://www.google.com/search?q=http://localhost:7860)
+
+## 🧪 Model & Implementation
+
+1. **Base Model:** `google/flan-t5-base` (248M Parameters) - A powerful Seq2Seq model.
+2. **Quantization:** **BitsAndBytes** 4-bit Normal Float (NF4) used for extreme memory efficiency.
+3. **PEFT Strategy:** **QLoRA** (Quantized Low-Rank Adaptation) targeting the query (`q`) and value (`v`) attention layers.
+4. **Dataset:** **SAMSum Corpus** (14k dialogues) processed with dynamic padding.
+
+## 📚 Documentation
+
+* [Analysis Notebook](https://www.google.com/search?q=Final_Project_Fixed.ipynb) - Detailed exploratory data analysis and evaluation metrics (ROUGE scores).
+* [Model Config](https://www.google.com/search?q=src/config.py) - View hyperparameters, learning rates, and LoRA configurations.
+* [App Source](https://www.google.com/search?q=src/app.py) - Logic behind the inference engine and UI.
+
+## 🛠️ Tech Stack
+
+* **Core:** Python 3.10
+* **DL Framework:** PyTorch, Hugging Face Transformers
+* **Optimization:** PEFT, BitsAndBytes, LoRA
+* **Interface:** Gradio
+* **Data Processing:** Datasets Library, Pandas
+
+## 📝 License
+
+This project is open-source and available under the [MIT License](https://www.google.com/search?q=LICENSE).
+
+```
+
+```
 
 
 
