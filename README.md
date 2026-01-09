@@ -20,46 +20,23 @@ Dialogue-Summarization/
 ├── requirements.txt          # List of dependencies
 └── README.md                 # Project Documentation
 
-🚀 Technical Implementation
-Base Model: Flan-T5 Base (248M Parameters)
 
-Optimization:
+## 🚀 Technical Implementation
+* **Base Model:** Flan-T5 Base (248M Parameters)
+* **Optimization:**
+    * **BitsAndBytes:** 4-bit Normal Float (NF4) quantization.
+    * **LoRA:** Rank=16, Alpha=32, targeting Query/Value modules.
+* **Dataset:** SAMSum (14k training dialogues).
 
-BitsAndBytes: 4-bit Normal Float (NF4) quantization.
-
-LoRA: Rank=16, Alpha=32, targeting Query/Value modules.
-
-Dataset: SAMSum (14k training dialogues).
-
-📊 Results
+## 📊 Results
 The model was evaluated on the test set with the following metrics:
+* **ROUGE-1:** 47.14
+* **BERTScore (F1):** 90.95
+* **Validation Loss:** 1.40 (No overfitting observed)
 
-ROUGE-1: 47.14
+## 💻 How to Run
 
-BERTScore (F1): 90.95
-
-Validation Loss: 1.40 (No overfitting observed)
-
-💻 How to Run
-1. Installation
+### 1. Installation
 Clone the repository and install the required dependencies:
-
-Bash
-
+```bash
 pip install -r requirements.txt
-2. Run the Prototype (Interactive Demo)
-To launch the Gradio web interface and test the model:
-
-Bash
-
-python app/app.py
-Click the local URL provided in the terminal (e.g., https://www.google.com/search?q=http://127.0.0.1:7860) to open the app.
-
-3. (Optional) Retrain the Model
-To reproduce the training process from scratch:
-
-Bash
-
-python src/train.py
-
-
