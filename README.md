@@ -11,10 +11,10 @@ This project focuses on **Abstractive Dialogue Summarization** using a parameter
 ```text
 Dialogue-Summarization-T5/
 │
-├── Notebook/                              <-- Jupyter Notebooks Directory
-│   └── Final_Project_Fixed (2).ipynb      <-- Main Project Notebook
+├── Notebook/                               # Jupyter Notebooks Directory
+│   └── Final_Project_Fixed (2).ipynb       # Main Project Notebook
 │
-├── src/                                   <-- Source Code Directory
+├── src/                                    # Source Code Directory
 │   ├── app.py                             # Interactive Gradio App
 │   ├── train.py                           # Training Script
 │   └── config.py                          # Configuration Settings
