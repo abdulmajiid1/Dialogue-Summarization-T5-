@@ -19,9 +19,9 @@ Dialogue-Summarization-T5/
 │   ├── train.py                           # Training Script
 │   └── config.py                          # Configuration Settings
 │
-├── requirements.txt                       <-- List of Dependencies
-├── README.md                              <-- Project Documentation
-└── LICENSE                                <-- MIT License
+├── requirements.txt                       # List of Dependencies
+├── README.md                              # Project Documentation
+└── LICENSE                                # MIT License
 
 ```
 
