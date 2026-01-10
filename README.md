@@ -7,15 +7,21 @@ This project focuses on **Abstractive Dialogue Summarization** using a parameter
 ## 🏗️ Project Structure
 
 ```bash
+
+```text
 Dialogue-Summarization-T5/
-├── src/                      # Source code for training and inference
-│   ├── app.py                # Interactive Gradio web application (Demo)
-│   ├── config.py             # Global hyperparameters and file paths
-│   ├── model_loader.py       # 4-bit Quantization (NF4) & LoRA configuration
-│   └── train.py              # Main training script (Hugging Face Trainer)
-├── Final_Project_Fixed.ipynb # Comprehensive Project Notebook
-├── requirements.txt          # Python dependencies
-└── README.md                 # Project Documentation
+│
+├── Notebook/                              <-- Jupyter Notebooks Directory
+│   └── Final_Project_Fixed (2).ipynb      <-- Main Project Notebook
+│
+├── src/                                   <-- Source Code Directory
+│   ├── app.py                             # Interactive Gradio App
+│   ├── train.py                           # Training Script
+│   └── config.py                          # Configuration Settings
+│
+├── requirements.txt                       <-- List of Dependencies
+├── README.md                              <-- Project Documentation
+└── LICENSE                                <-- MIT License
 
 ```
 
